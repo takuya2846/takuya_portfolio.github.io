@@ -1,0 +1,644 @@
+@charset "UTF-8";
+
+html {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul,li,dl,dt,dd {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+a { 
+  text-decoration: none; 
+  transition: all .6s ease;
+}
+
+a:hover { 
+  transition: all .6s ease;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* ヘッダーのCSS */
+header {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.header-nav {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  font-size: 2.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(90, 90, 90, 0.2);
+  position: fixed;
+  z-index: 10;
+}
+
+.header-nav-items {
+  display: flex;
+}
+
+.header-nav-items li {
+  margin-right: 80px;
+}
+
+.header-nav-items a {
+  color: #000;
+}
+
+.fa-envelope {
+  color: rgb(102, 102, 102);
+  margin-right: 80px;
+  cursor: pointer;
+}
+
+.fa-twitter {
+  color: rgb(105, 105, 105);
+  margin-right: 80px;
+  cursor: pointer;
+}
+
+.title-text {
+  font-size: 5rem;
+  text-align: center;
+  line-height: 700px;
+}
+
+.global-nav__list {
+  display: none;
+}
+
+/* 問い合わせ用モーダル */
+.contact-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display:none;
+}
+
+.modal {
+  width: 60%;
+  height: 450px;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+}
+
+.fa-times {
+  float: right;
+  font-size: 3rem;
+  margin-right: 15px;
+  color: rgb(99, 99, 99);
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
+.fixed {
+	position: fixed;
+}
+
+/* ヘッダーメディアクエリ */
+@media screen and (max-width: 959px) {
+  .header-nav {
+    display: none;
+  }
+
+  header {
+    height: 500px;
+  }
+
+  .title-text {
+    font-size: 4rem;
+    line-height: 500px;
+  }
+  /* ハンバーガーメニューのCSS */
+  .global-nav {
+    position: fixed;
+    left: -350px; /* これで隠れる */
+    top: 0;
+    width: 300px; /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: fixed;
+    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    margin: 15px 0 0 20px;
+    cursor: pointer;
+    z-index: 300;
+  }
+  .global-nav__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__item {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 14px;
+  }
+  .global-nav__item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+  }
+  .global-nav__item a:hover {
+    background-color: #eee;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 1px;
+    background-color: #111;
+    transition: all .6s;
+  }
+  .hamburger__line--1 {
+    top: 14px;
+  }
+  .hamburger__line--2 {
+    top: 20px;
+  }
+  .hamburger__line--3 {
+    top: 26px;
+  }
+  .black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    left: 0;
+  }
+  .nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+  .fa-twitter {
+    font-size: 2.5rem;
+    margin: 10px 0 0 220px;
+  }
+}
+@media screen and (max-width: 559px) {
+  header {
+    height: 350px;
+    margin-bottom: 30px;
+  }
+
+  .title-text {
+    font-size: 2.3rem;
+    line-height: 350px;
+  }
+
+  .hamburger-modal {
+    right: 300px;
+  }
+
+  .hamburger-items li:first-child {
+    margin-top: 20px;
+  }
+
+  .hamburger-items li {
+    font-weight: bold;
+    color: rgba(204, 204, 204, 0.7);
+    margin:0 0 15px 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title-text {
+    font-size: 1.5rem;
+  }
+
+  .global-nav {
+    width: 200px; /* スマホに収まるくらい */
+  }
+
+  .fa-twitter {
+    font-size: 2.5rem;
+    margin: 10px 0 0 140px;
+  }
+}
+
+/* プロフィールのCSS */
+.profile {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.profile h1 {
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.profile-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: bottom;
+  margin-left: 80px;
+}
+
+.profile-text {
+  font-size: 1.5rem;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 959px) {
+  .profile {
+    height: 800px;
+    text-align: center;
+  }
+
+  .profile h1 {
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+  }
+
+  .profile-main {
+    display: inline-block;
+  }
+
+  .profile img {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+  }
+
+  .profile-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile-text p {
+    margin: 0 auto;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .profile {
+    height: 900px;
+  }
+
+  .profile-text {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .profile {
+    height: 1050px;
+  }
+}
+
+/* スキルのCSS */
+.skill {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.skill h1 {
+  width: 100%;
+  font-size: 5rem;
+  margin-bottom: 50px;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: 33%;
+  font-size: 3rem;
+}
+
+.list-item i {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.list-item i:hover {
+  opacity: .7;
+  transition: .7s;
+}
+
+.skill-modal {
+  width: 60%;
+  height: 450px;
+  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+}
+
+.skill-text {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.skill-text p{
+  font-size: 2.5rem;
+  margin: 40px auto;
+}
+
+.php-text p{
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px auto;
+}
+
+/* @media screen and (max-width: 959px) {
+@media screen and (max-width: 559px) {
+@media screen and (max-width: 375px) { */
+
+/* ワークのCSS */
+.works {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.works h1 {
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.stockmanager {
+  width: 40%;
+  text-align: center;
+}
+
+.stockmanager:hover {
+  opacity: 0.4;
+  transition: .8s;
+}
+
+.stockmanager a {
+  color: black;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 959px) {
+  .works {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  .works h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .works {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+  }
+}
+
+/* コンタクトのCSS */
+.contact {
+  width: 100%;
+  height: 650px;
+  margin-bottom: 50px;
+}
+
+.contact h1 {
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.input-area {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contact-form p {
+  margin-bottom: 0;
+}
+
+.left-area {
+  margin-right: 10px;
+}
+
+.left-area input {
+  width: 250px;
+  height: 25px;
+}
+
+.right-area {
+  margin-left: 10px;
+}
+
+.right-area textarea {
+  width: 400px;
+  height: 200px;
+}
+
+.input-btn {
+  display: block;
+  width: 150px;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: rgba(204, 204, 204, 0.9);
+  box-shadow: 9px 9px 17px #b1b1b1;
+  cursor: pointer;
+}
+
+.input-btn:hover {
+  opacity: 0.7;
+  transition: 0.8s;
+}
+
+.top-btn {
+  float: right;
+}
+
+.fa-arrow-alt-circle-up {
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.top-btn p {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 959px) {
+  .contact {
+    height: 600px;
+  }
+  
+  .contact h1 {
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .input-area {
+    font-weight: bold;
+  }
+
+  .top-btn p {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .contact {
+    height: 800px;
+  }
+
+  .input-area {
+    display: block;
+  }
+
+  .input-area p {
+    margin-bottom: 10px;
+  }
+
+  .left-area {
+    margin-right: 0;
+  }
+
+  .right-area {
+    margin-left: 0;
+  } 
+
+  .fa-arrow-alt-circle-up {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .input-area {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .right-area textarea {
+    width: 300px;
+  }
+}
+
+/* フッターのCSS */
+footer {
+  width: 100%;
+  height: 100px;
+  background: rgba(90, 90, 90, 0.3);
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+}
