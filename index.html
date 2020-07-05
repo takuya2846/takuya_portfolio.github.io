@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>MYPORTFOLIO</title>	
+<link rel="stylesheet" href="./css/style.css"/>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+ integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+ crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header" id="top">
+    <nav class="global-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item"><a href="#prof">Profile</a></li>
+        <li class="global-nav__item"><a href="#skill">Skill</a></li>
+        <li class="global-nav__item"><a href="#works">Works</a></li>
+        <a href="https://twitter.com/a_sl3es"><i class="fab fa-twitter"></i></a>
+      </ul>
+    </nav>
+    <div class="hamburger" id="js-hamburger">
+      <span class="hamburger__line hamburger__line--1"></span>
+      <span class="hamburger__line hamburger__line--2"></span>
+      <span class="hamburger__line hamburger__line--3"></span>
+    </div>
+    <div class="black-bg" id="js-black-bg"></div>
+    <div class="contact-modal-wrapper" id="contact-modal">
+    <div class="modal">
+      <div id="contact-form">
+        <form class="contact-form" action="">
+          <i class="fas fa-times" id="close-modal"></i>
+            <p class="modal-title">Contact</p>
+          <div class="input-area">
+            <div class="left-area">
+              <label for="name-modl"><p>名前</p></label>
+              <input id="name-modl" type="text" name="Name">
+              <label for="tel-modl"><p>電話番号</p></label>
+              <input id="tel-modl" type="tel" name="Tel">
+              <label for="add-modl"><p>メールアドレス</p></label>
+              <input id="add-modl" type="email" name="Add">
+            </div>
+            <div class="right-area">
+              <p>お問い合わせ内容</p>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+            <input class="input-btn" type="submit" value="送信">
+        </form>
+      </div>
+    </div>
+  </div>
+    <div class="header-nav">
+     <nav>
+      <ul class="header-nav-items">
+        <li><a href="#prof">Profile</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#works">Works</a></li>
+      </ul>
+    </nav>
+      <i class="far fa-envelope" id="open-modal"><a href="#"></a></i>
+      <a href="https://twitter.com/a_sl3es" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div>
+      <h1 class="title-text">TAKUYA_PORTFOLIO.</h1>
+    </div>
+  </header>
+  <main>
+  <article class="profile" id="prof">
+    <section class="content-wrapper">
+      <h1>Profile</h1>
+      <div class="profile-main">
+        <img src="./images/photo.jpg" alt="本人イメージ">
+        <div class="profile-text">
+          <p>福田拓矢</p>
+          <p>Takuya Fukuda</p>
+          <p>1984.12.26</p>
+          <p>2019年10月よりIT業界に転職。<br>2020年1月よりHTML,CSS,javascriptを独学で始める。<br>その後、サーバーサイドに興味を持ち5月よりPHPの学習を始め現在に至る。<br>サービス業向けのシステムを開発の目標とし、過去の経験からあったら便利だなとサービスを形にする為勉強中。</p>
+        </div>
+      </div>
+    </section>
+  </article>
+  <article class="skill" id="skill">
+   <section class="content-wrapper">
+    <h1>Skill</h1>
+    <div class="skill-list">
+      <div class="list-item">
+        <i class="fab fa-html5" id="open-html-modal"></i>
+        <p>HTML5</p>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+      <div class="contact-modal-wrapper" id="html-modal">
+        <div class="skill-modal">
+          <i class="fas fa-times close-modal"></i>
+          <div class="html-text skill-text">
+            <p>HTML5</p>
+            <p>★★★☆☆</p>
+            <p>・LP作成</p>
+          </div>
+        </div>
+      </div>
+      <div class="list-item">
+        <i class="fab fa-css3-alt" id="open-css-modal"></i>
+        <p>CSS3</p>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+      <div class="contact-modal-wrapper" id="css-modal">
+        <div class="skill-modal">
+          <i class="fas fa-times close-modal"></i>
+          <div class="CSS-text skill-text">
+            <p>CSS3</p>
+            <p>★★★☆☆</p>
+            <p>・レスポンシブ化</p>
+          </div>
+        </div>
+      </div>
+      <div class="list-item">
+        <i class="fab fa-js-square" id="open-js-modal"></i>
+        <p>javascript</p>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+      <div class="contact-modal-wrapper" id="js-modal">
+        <div class="skill-modal">
+          <i class="fas fa-times close-modal"></i>
+          <div class="javascript-text skill-text">
+            <p>javascript</p>
+            <p>★★☆☆☆</p>
+            <p>・簡単なアプリケーションの作成</p>
+            <p>・jqueryを使用したwebサイトの作成</p>
+          </div>
+        </div>
+      </div>
+      <div class="list-item">
+        <i class="fab fa-php" id="open-php-modal"></i>
+        <p>PHP</p>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+      <div class="contact-modal-wrapper" id="php-modal">
+        <div class="skill-modal">
+          <i class="fas fa-times close-modal"></i>
+          <div class="php-text">
+            <p>PHP</p>
+            <p>★★☆☆☆</p>
+            <p>PHPの基礎的な知識</p>
+            <p>・ログイン機能</p>
+            <p>・ToDoアプリ</p>
+          </div>
+        </div>
+      </div>
+      <div class="list-item">
+        <i class="fas fa-database" id="open-sql-modal"></i>
+        <p>Mysql</p>
+      </div>
+    </div>
+   </section>
+  </article>
+  <article class="works" id="works">
+   <section class="content-wrapper">
+    <h1>Works</h1>
+    <div class="stockmanager">
+      <a href="" target="_blank"><img src="./images/stockmanager_image.png" alt="stockmanager">在庫管理アプリ</a>
+      <p>※現在制作中</p>
+    </div>
+   </section>
+  </article>
+  <article class="contact">
+   <section class="content-wrapper">
+    <h1>Contact</h1>
+    <form class="contact-form" action="">
+      <div class="input-area">
+        <div class="left-area">
+          <label for="name"><p>名前</p></label>
+          <input id="name" type="text" name="Name">
+          <label for="tel"><p>電話番号</p></label>
+          <input id="tel" type="tel" name="Tel">
+          <label for="add"><p>メールアドレス</p></label>
+          <input id="add" type="email" name="Add">
+        </div>
+        <div class="right-area">
+          <label for="inq"><p>お問い合わせ内容</p></label>
+          <textarea name="Inq" id="inq" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+        <input class="input-btn" type="submit" value="送信">
+    </form>
+    <div class="top-btn">
+      <a href="#top"><i class="far fa-arrow-alt-circle-up"></i></a>
+      <p>TOPへ</p>
+    </div>
+   </section>
+  </article>
+  </main>
+  <footer class="footer">
+   <p>2020 © T.Fukuda</p>
+  </footer>
+ <script type="text/javascript" src="./js/main.js"></script>
+ <script type="text/javascript" src="./js/jquery.inview.js"></script>
+ <script type="text/javascript" src="./js/t.min.js"></script>
+</body>
+</html>
