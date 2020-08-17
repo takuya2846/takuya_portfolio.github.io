@@ -436,70 +436,52 @@ header {
 }
 
 @media screen and (max-width: 559px) {
-  .list-item {
-    width: 50%;
-    font-size: 3rem;
+  .skill h1 {
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+  }
+  
+  .prbar {
+    display: block;
   }
 
-  .skill-text p {
-    font-size: 1.5rem;
-    margin: 40px auto;
+  .prbar p {
+    margin: 0;
+  }
+
+
+  #html {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
   }
   
-  .javascript-text {
-    padding-top: 40px;
+  #css {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
   }
   
-  .javascript-text p {
-    text-align: center;
-    font-size: 1.3rem;
-    line-height: 45px;
+  #js {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
   }
   
-  .php-text p {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 30px auto;
+  #php {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #sql {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .list-item {
-    width: 50%;
-    font-size: 2rem;
-  }
-
-  .skill-text p {
-    font-size: 1.3rem;
-    margin: 40px auto;
-  }
-  
-  .javascript-text {
-    padding-top: 40px;
-  }
-  
-  .javascript-text p {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 30px;
-  }
-  
-  .php-text {
-    padding-top: 18px;
-  }
-  
-  .php-text p {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 30px;
-  }
-
-  .skill-modal {
-    height: 350px;
-  }
-  
 }
 
 /* @media screen and (max-width: 375px)  */
