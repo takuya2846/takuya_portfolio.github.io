@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.5.0.min.js"
  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
  crossorigin="anonymous"></script>
+ <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.js"></script>
 </head>
 <body>
   <header class="header" id="top">
@@ -81,81 +82,34 @@
       </div>
     </section>
   </article>
-  <article class="skill" id="skill">
-   <section class="content-wrapper">
-    <h1>Skill</h1>
-    <div class="skill-list">
-      <div class="list-item">
-        <i class="fab fa-html5" id="open-html-modal"></i>
-        <p>HTML5</p>
-      </div>
-      <div class="black-bg" id="js-black-bg"></div>
-      <div class="contact-modal-wrapper" id="html-modal">
-        <div class="skill-modal">
-          <i class="fas fa-times close-modal"></i>
-          <div class="html-text skill-text">
-            <p>HTML5</p>
-            <p>★★★☆☆</p>
-            <p>・LP作成</p>
-          </div>
-        </div>
-      </div>
-      <div class="list-item">
-        <i class="fab fa-css3-alt" id="open-css-modal"></i>
-        <p>CSS3</p>
-      </div>
-      <div class="black-bg" id="js-black-bg"></div>
-      <div class="contact-modal-wrapper" id="css-modal">
-        <div class="skill-modal">
-          <i class="fas fa-times close-modal"></i>
-          <div class="CSS-text skill-text">
-            <p>CSS3</p>
-            <p>★★★☆☆</p>
-            <p>・レスポンシブ化</p>
-          </div>
-        </div>
-      </div>
-      <div class="list-item">
-        <i class="fab fa-js-square" id="open-js-modal"></i>
-        <p>javascript</p>
-      </div>
-      <div class="black-bg" id="js-black-bg"></div>
-      <div class="contact-modal-wrapper" id="js-modal">
-        <div class="skill-modal">
-          <i class="fas fa-times close-modal"></i>
-          <div class="javascript-text">
-            <p>javascript</p>
-            <p>★★☆☆☆</p>
-            <p>・簡単なアプリケーションの作成</p>
-            <p>・jqueryを使用したwebサイトの作成</p>
-          </div>
-        </div>
-      </div>
-      <div class="list-item">
-        <i class="fab fa-php" id="open-php-modal"></i>
-        <p>PHP</p>
-      </div>
-      <div class="black-bg" id="js-black-bg"></div>
-      <div class="contact-modal-wrapper" id="php-modal">
-        <div class="skill-modal">
-          <i class="fas fa-times close-modal"></i>
-          <div class="php-text">
-            <p>PHP</p>
-            <p>★★☆☆☆</p>
-            <p>PHPの基礎的な知識</p>
-            <p>・ログイン機能</p>
-            <p>・ToDoアプリ</p>
-          </div>
-        </div>
-      </div>
-      <div class="list-item">
-        <i class="fas fa-database" id="open-sql-modal"></i>
-        <p>Mysql</p>
-      </div>
-    </div>
-   </section>
-  </article>
-  <article class="works" id="works">
+  <article class="skill">
+    <section class="content-wrapper">
+     <h1>Skill</h1>
+     <div class="skillset">
+       <div class="prbar">
+         <p>HTML</p>
+         <div id="html"></div>
+       </div>
+       <div class="prbar">
+         <p>CSS</p>
+         <div id="css"></div>
+       </div>
+       <div class="prbar">
+         <p>javascript</p>
+         <div id="js"></div>
+       </div>
+       <div class="prbar">
+         <p>PHP</p>
+         <div id="php"></div>
+       </div>
+       <div class="prbar">
+         <p>MySQL</p>
+         <div id="sql"></div>
+       </div>
+     </div>
+    </section>
+   </article>
+   <article class="works" id="works">
    <section class="content-wrapper">
     <h1>Works</h1>
     <div class="stockmanager">
@@ -198,5 +152,6 @@
  <script type="text/javascript" src="./js/main.js"></script>
  <script type="text/javascript" src="./js/jquery.inview.js"></script>
  <script type="text/javascript" src="./js/t.min.js"></script>
+ <script type="text/javascript" src="./js/progress.js"></script>
 </body>
 </html>
