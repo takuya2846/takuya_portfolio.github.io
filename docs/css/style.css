@@ -314,8 +314,8 @@ header {
   width: 100%;
   height: auto;
   background: rgba(207, 236, 255, 0.3);
-  margin-bottom: 50px;
   padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .profile h1 {
@@ -483,10 +483,6 @@ header {
   }
 }
 
-@media screen and (max-width: 375px) {
-  
-}
-
 /* @media screen and (max-width: 375px)  */
 
 /* ワークのCSS */
@@ -545,18 +541,37 @@ header {
   display: block;
 }
 
-@media screen and (max-width: 959px) {
-  .works {
-    margin-bottom: 50px;
+@media screen and (max-width: 559px) {
+  .work-list {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  .works h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }  
+
+  .stockmanager {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .portfolio {
+    width: 80%;
+    margin: 0 auto;
   }
   
-  .works h1 {
-    width: 100%;
-    font-size: 3.5rem;
-    letter-spacing: 8px;
-    text-align: center;
-  }
 }
+
+@media screen and (max-width: 375px) {
+  
+}
+
 
 /* コンタクトのCSS */
 .contact {
