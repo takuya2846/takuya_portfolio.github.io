@@ -36,7 +36,7 @@ if (window.matchMedia('(max-width: 375px)').matches) {
   //バーの長さ
   bar.animate(skillset[keys] / 100);  // Number from 0.0 to 1.0
   }
-} else if (window.matchMedia('(min-width:559px)').matches) {
+} else if (window.matchMedia('(max-width:559px)').matches) {
   //PC処理
   let skillset = {'html': 60, 'css': 51, 'js': 40, 'php': 64, 'sql': 24};
   
@@ -74,7 +74,7 @@ if (window.matchMedia('(max-width: 375px)').matches) {
   //バーの長さ
   bar.animate(skillset[keys] / 100);  // Number from 0.0 to 1.0
   } 
-} else if (window.matchMedia('(min-width:960px)').matches) {
+} else if (window.matchMedia('(min-width:960px)').matches || window.matchMedia('(max-width:960px)').matches) {
   //PC処理
   let skillset = {'html': 60, 'css': 51, 'js': 40, 'php': 64, 'sql': 24};
   
