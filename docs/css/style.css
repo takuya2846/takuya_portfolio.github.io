@@ -435,7 +435,7 @@ header {
   position: relative;
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 959px) {
   .skill h1 {
     font-size: 3.5rem;
     letter-spacing: 8px;
@@ -482,6 +482,7 @@ header {
 }
 
 @media screen and (max-width: 375px) {
+  
 }
 
 /* @media screen and (max-width: 375px)  */
@@ -490,6 +491,7 @@ header {
 .works {
   width: 100%;
   height: auto;
+  background: rgba(207, 236, 255, 0.3);
   margin-bottom: 50px;
 }
 
@@ -499,19 +501,46 @@ header {
   text-align: center;
 }
 
+.work-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
 .stockmanager {
   width: 40%;
   text-align: center;
 }
 
-.stockmanager:hover {
+.stockmanager a {
+  color: black;
+  font-size: 1.3rem;
+}
+
+.stockmanager a:hover {
   opacity: 0.4;
   transition: .8s;
 }
 
-.stockmanager a {
+.portfolio {
+  width: 40%;
+  text-align: center;
+}
+
+.portfolio a {
   color: black;
   font-size: 1.3rem;
+}
+
+.portfolio a:hover {
+  opacity: 0.4;
+  transition: .8s;
+}
+
+
+.githb {
+  display: block;
 }
 
 @media screen and (max-width: 959px) {

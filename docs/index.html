@@ -83,44 +83,62 @@
     </section>
   </article>
   <article class="skill">
-    <section class="content-wrapper">
-     <h1>Skill</h1>
-     <div class="skillset">
-       <div class="prbar">
-         <p>HTML</p>
-         <div id="html"></div>
-       </div>
-       <div class="prbar">
-         <p>CSS</p>
-         <div id="css"></div>
-       </div>
-       <div class="prbar">
-         <p>javascript</p>
-         <div id="js"></div>
-       </div>
-       <div class="prbar">
-         <p>PHP</p>
-         <div id="php"></div>
-       </div>
-       <div class="prbar">
-         <p>MySQL</p>
-         <div id="sql"></div>
-       </div>
-     </div>
-    </section>
-   </article>
-   <article class="works" id="works">
+   <section class="content-wrapper">
+    <h1>Skill</h1>
+    <div class="skillset">
+      <div class="prbar">
+        <p>HTML</p>
+        <div id="html"></div>
+      </div>
+      <div class="prbar">
+        <p>CSS</p>
+        <div id="css"></div>
+      </div>
+      <div class="prbar">
+        <p>javascript</p>
+        <div id="js"></div>
+      </div>
+      <div class="prbar">
+        <p>PHP</p>
+        <div id="php"></div>
+      </div>
+      <div class="prbar">
+        <p>MySQL</p>
+        <div id="sql"></div>
+      </div>
+    </div>
+   </section>
+  </article>
+  <article class="works" id="works">
    <section class="content-wrapper">
     <h1>Works</h1>
-    <div class="stockmanager">
-      <a href="https://stock-manager-takuyaapp.herokuapp.com/index.php" target="_blank"><img src="./images/stockmanager_image.png" alt="stockmanager">在庫管理アプリ</a>
+    <div class="work-list">
+      <div class="stockmanager">
+        <a href="https://stock-manager-takuyaapp.herokuapp.com/index.php" target="_blank"><img src="./images/stockmanager_image.png" alt="stockmanager">在庫管理アプリ</a>
+        <a class="githb" href="https://github.com/takuya2846/stockmanager" target="_blank">github</a>
+        <p>言語：HTML5/CSS3/PHP</p>
+        <p>サーバー：Heroku</p>
+        <p>webサーバー：Apache</p>
+        <p>DB：MySQL</p>
+        <p>バージョン管理：Git/GitHub</p>
+        <p>ログインID：taku2846</p>
+        <p>パスワード：taku2846</p>
+      </div>
+      <div class="portfolio">
+        <a href="https://takuya2846.github.io/takuya_portfolio.github.io/" target="_blank"><img src="./images/portfolio.png" alt="stockmanager">ポートフォリオ</a>
+        <a class="githb" href="https://github.com/takuya2846/takuya_portfolio.github.io" target="_blank">github</a>
+        <p>言語：HTML5/CSS3/JavaScript</p>
+        <p>FW：jQuery</p>
+        <p>サーバー：GitHubpages</p>
+        <p>バージョン管理：Git/GitHub</p>
+      </div>
     </div>
    </section>
   </article>
   <article class="contact">
    <section class="content-wrapper">
     <h1>Contact</h1>
-    <form class="contact-form" action="">
+    <form class="contact-form" action="./php/confirm.php" method="POST">
       <div class="input-area">
         <div class="left-area">
           <label for="name"><p>名前</p></label>
